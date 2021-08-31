@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.82">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {-webkit-text-stroke: 0px #000000}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; line-height: 28.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>The project and it’s components</b></span></h1>
+<p class="p2"><span class="s1">In this file I will give you a deep insight into the code and on how you can can use the different parts of it. As the code is divided into several files (in the 'Extensions' group),<br>
+I will explain you file by file, so that if you need only a specific part of the code, you should easily find it.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">Here are the main items of my code. If you only need one or a few of them, feel free to scroll down to the part you are interested in, to get everything you need for this item.</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">Here are the different sections of the code<span class="Apple-converted-space"> </span></span></p>
+<ul class="ul1">
+  <li class="li3"><span class="s2"></span><span class="s1">Declaring and setting up all the variables : <i>GameScene.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Algorithm to get a random number : <i>Random.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Set up a timer : <i>Time.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Create the random boxes from the game and make them move down : <i>CreateBoxes.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Create borders on the edge of the screen so that the bullet can not fly away : <i>CreateBorders.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Shoot bullets to a user-defined position : <i>Shoot.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Handle the touches of the user : <i>Touches.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Check which nodes collided : <i>Contacts.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Setting up and ending a game : <i>EndCreateGame.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Setting up the in game-menu : <i>InGameMenu.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Setting up the game over-view : <i>GameOverView.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Setting up the main menu with all its features (jumping ball, several buttons...) : <i>Menu.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Get the code for the animated pause-button : <i>PlaybackButton.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Saving and loading data from core data : <i>CoreData.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Sharing on Facebook and Twitter : <i>Share.swift</i></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Display a banner and video ad : <i>Ad.swift</i></span></li>
+</ul>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>GameScene.swift</b></span></h2>
+<p class="p5"><span class="s1">This is the main file of the whole project. It declares the class GameScene in which all the functionalities of the game are coded.</span></p>
+<p class="p5"><span class="s1">In fact, I could have put the whole code of this game into this file, but to guarantee a good overview of the project, I decided to split<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1">up the code into several files, sorted by categories.</span></p>
+<p class="p5"><span class="s1">If you would want to add new features to the game, GameScene would be the class in which you would have to write your code, no matter if<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1">you put it into the file GameScene.swift, or in a separate file like I did. If you use a separate file, write your code like this</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1"><i>import SpriteKit</i></span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1"><i>extension GameScene{</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">  </span>// write your code here</i></span></p>
+<p class="p5"><span class="s1"><i>}</i></span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1">What have i coded in the GameScene.swift file itself?</span></p>
+<p class="p5"><span class="s1">In this file, I declared all the variables, I would need through the whole game. Besides giving me a good overview of my variables, declaring</span></p>
+<p class="p5"><span class="s1">them at the beginning, outside any functions, allows me to use them in any function throughout my code.</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1">Furthermore, this file contains the didMoveTo(view:) function.</span></p>
+<p class="p5"><span class="s1">This function gets called only once : when the app has been opened. It is the place to initialise any variable and</span></p>
+<p class="p5"><span class="s1">to call the necessary functions to start the game.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Random.swift</b></span></h2>
+<p class="p5"><span class="s1">There is nothing much to say about this file. It only contains a very simple function which you can call to get a random number of a range</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Time.swift</b></span></h2>
+<p class="p5"><span class="s1">This file contains to two functions to to start a timer a function to update a label (make a countdown). You can easily change the time</span></p>
+<p class="p5"><span class="s1">interval and the functions called by the timer called every x seconds.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>CreateBoxes.swift</b></span></h2>
+<p class="p5"><span class="s1">This is the file which creates the boxes randomly. Within a for loop from 1-8, 8 boxes are created (or not). To decide whether a box is</span></p>
+<p class="p5"><span class="s1">created or not, I used the randomNumber function. If in a range from 0-1, it gives me 0, no box is created and we move forward to<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1">the next position, if it gives me 1,a box is created.</span></p>
+<p class="p5"><span class="s1">Furthermore, this file contains the algorithm to move the boxes down (the second for loop), and it created the text labels for the boxes to</span></p>
+<p class="p5"><span class="s1">show how many hit points they have left.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>CreateBorders.swift</b></span></h2>
+<p class="p5"><span class="s1">This again is a more simple file. It creates 4 borders forming a rectangle, so that when the user shoots the bullets, they can not go</span></p>
+<p class="p5"><span class="s1">off screen.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Shoot.swift</b></span></h2>
+<p class="p5"><span class="s1">This file contains 3 functions. The first one simply creates a bullet, not doing anything but showing the user from where he is going to shoot</span></p>
+<p class="p5"><span class="s1">next. The second one gets called by one of the timers to shoot bullets in a regular time interval once to user decided to shoot. It creates a bullet</span></p>
+<p class="p5"><span class="s1">and uses the last function to get the speed and the direction in which the bullet is going to fly. (receives an impulse in the form of a vector)</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Touches.swift</b></span></h2>
+<p class="p5"><span class="s1">This is the file which handles all the touches given by the user. It handles what to do when the user began touching the screen, when he moved</span></p>
+<p class="p5"><span class="s1">his finger around and the screen and finally when e ended his touch. This file does not do any extraordinary things, e.g. pressing a button when the</span></p>
+<p class="p5"><span class="s1">user touched a button. (well... that's still quite impressive isn't it?)</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Contacts.swift</b></span></h2>
+<p class="p5"><span class="s1">The file to handle all crashes. Well, that may sound more spectacular than it actually is. In fact, the function it contains gets called every<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1">time two nodes collided. What I did then, is checking which nodes collided and reacting accordingly. E.g a bullet collides with a box : The hit points</span></p>
+<p class="p5"><span class="s1">of the box is reduced by one. (This makes the game look more boring than it actually is...)</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>EndCreateGame.swift</b></span></h2>
+<p class="p5"><span class="s1">This file again contains three main functions. The first one resets all the necessary variables(e.g, preloading the video ad, setting the score to 0)</span></p>
+<p class="p5"><span class="s1">to start a game and actually starts it. The second one checks if the round is over or not(whether there are still bullets flying or not). The third one</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space"> </span>gets called after every round of the game to check whether the user lost or not.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>InGameMenu.swift</b></span></h2>
+<p class="p5"><span class="s1">This file creates the in game-menu. (Yep, this explanation was not necessary). It really does not do anything outrageous, only layout things. The only<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1">interesting thing might be the function which decided what to when the user presses the pause button.(Pausing the game wouldn't be a badd idea)</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>GameOverView.swift</b></span></h2>
+<p class="p5"><span class="s1">This file creates the view once the user has lost the game. In this view he gets to choose whether he wants to look a video to get another chance or not.</span></p>
+<p class="p5"><span class="s1">Then,<span class="Apple-converted-space">  </span>it also contains a function to delete the game over-view, which gets called when the user wanted to get another chance so that he can keep on playing.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Menu.swift</b></span></h2>
+<p class="p5"><span class="s1">This file is pretty similar to the InGameMenu.swift and GameOverView.swift. It again does only layout things (buttons etc...). There is only one interesting<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1">thing : the function which creates this cute bouncing bullet in the menu. I you need it, feel free to grab that function.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>PlayBackButton.swift</b></span></h2>
+<p class="p5"><span class="s1">There is nothing much to say about this file. If want to use the same playback button in another project, just copy&amp;paste this file into your project and create</span></p>
+<p class="p5"><span class="s1">an instance of the playback button like this:</span></p>
+<p class="p5"><span class="s1"><br>
+</span></p>
+<p class="p5"><span class="s1"><i>func createPauseButton() {</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">        </span>pauseButton = PlaybackButton(frame: CGRect(x: 0, y: 5, width: self.frame.width / 10, height: self.frame.width / 10 ))</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">        </span>pauseButton.contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">        </span>pauseButton.adjustMargin = 1</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">        </span>pauseButton.backgroundColor = UIColor.clear</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">        </span>pauseButton.setButtonColor(UIColor.white)</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">        </span>pauseButton.addTarget(self, action: #selector(didTapPauseButton(_:)), for: UIControlEvents.touchUpInside)</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">        </span>self.pauseButton.setButtonState(.playing, animated: false)</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">        </span>self.scene?.view?.addSubview(self.pauseButton)</i></span></p>
+<p class="p5"><span class="s1"><i><span class="Apple-converted-space">    </span>}</i></span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>GameOverView.swift</b></span></h2>
+<p class="p5"><span class="s1">This file creates the view once the user has lost the game. In this view he gets to choose whether he wants to look a video to get another chance or not.</span></p>
+<p class="p5"><span class="s1">Then,<span class="Apple-converted-space">  </span>it also contains a function to delete the game over-view, which gets called when the user wanted to get another chance so that he can keep on playing.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>CoreData.swift</b></span></h2>
+<p class="p5"><span class="s1">A simple but maybe interesting file. If you want to save small values, like the high score etc..., you can just copy&amp;paste the two functions this file contains</span></p>
+<p class="p5"><span class="s1">and replace the variables with the ones you want to be saved in core data. By saving values into core data, they will not get deleted even if the user closes the game</span></p>
+<p class="p5"><span class="s1">completely.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Share.swift</b></span></h2>
+<p class="p5"><span class="s1">This file only contains one but very important function. This function contains everything you need to share something on Facebook and Twitter. Simply call this</span></p>
+<p class="p5"><span class="s1">function whenever you the user to be able to share something directly from your app, et voilà, everything will work just fine.</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Ad.swift</b></span></h2>
+<p class="p5"><span class="s1">This file contains everything you need to show and hide banner ads, rewarded video ads and interstitial ads. To display ads of your own account, read my small guide in the READM.ME file.</span></p>
+<p class="p5"><span class="s1">Once you did that and replaced your own app-id in the placeholders, this functions will work just fine. Again, if you need them somewhere else, feel free to just copy&amp;paste them!:)</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">That's it! I hope I could explain to you all the features this project contains and how to use them. If there are any further questions I would be glad to answer them. <br>
+Email : relorapps@gmail.com<span class="Apple-converted-space"> </span></span></p>
+</body>
+</html>

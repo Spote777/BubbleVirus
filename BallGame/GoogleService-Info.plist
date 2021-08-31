@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1091371951609-usl1n05i8melrf2euo7bs5eo6canb6nf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1091371951609-usl1n05i8melrf2euo7bs5eo6canb6nf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCqM0ys51BkJtfaMT6akAGAm2o5K8cQm1A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1091371951609</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.yanisschmit.Social</string>
+	<key>PROJECT_ID</key>
+	<string>social-844a1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>social-844a1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1091371951609:ios:0da6f7143bd67cb4</string>
+	<key>DATABASE_URL</key>
+	<string>https://social-844a1.firebaseio.com</string>
+</dict>
+</plist>
